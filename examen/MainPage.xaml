@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:examen"
+             x:Class="examen.MainPage"
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+             android:TabbedPage.ToolbarPlacement="Bottom"
+             android:TabbedPage.BarItemColor="Black"
+             android:TabbedPage.BarSelectedItemColor="Green"   
+             Title="TiendApp"
+             SelectedTabColor="Red"
+             BarTextColor="red"
+             BackgroundColor="White"
+             BarBackgroundColor="White"
+            >
+
+    <NavigationPage IconImageSource="products.png" x:Name="ProductsNavPage">
+        <x:Arguments>
+            <local:Productos/>            
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage IconImageSource="customer.png" HasNavigationBar="False">
+        <x:Arguments>
+            <local:Clientes />
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage IconImageSource="bill.png" HasNavigationBar="False">
+        <x:Arguments>
+            <local:Ventas />
+        </x:Arguments>
+    </NavigationPage>
+    
+</TabbedPage>
