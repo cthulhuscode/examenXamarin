@@ -16,5 +16,10 @@ namespace examen
         {
             InitializeComponent();
         }
+
+        private void lvClientes_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+
+        }
     }
 }

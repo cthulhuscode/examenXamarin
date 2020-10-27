@@ -11,17 +11,17 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Margin="35,15,15,15">
-                <Label Text="Nombre" FontSize="Medium" TextColor="Black"/>
+                <Label Text="Nombre" FontSize="Medium" TextColor="White"/>
                 <Entry x:Name="nombre" Visual="Material"/>
-                <Label Text="Precio de venta" FontSize="Medium" TextColor="Black"/>
+                <Label Text="Precio de venta" FontSize="Medium" TextColor="White"/>
                 <Entry x:Name="preciodeventa" Keyboard="Numeric"/>
-                <Label Text="Cantidad" FontSize="Medium" TextColor="Black"/>
+                <Label Text="Cantidad" FontSize="Medium" TextColor="White"/>
                 <Entry x:Name="cantidad" Keyboard="Numeric"/>
-                <Label Text="Precio de costo" FontSize="Medium" TextColor="Black"/>
-                <Entry x:Name="preciodecompra" Keyboard="Numeric" TextColor="Black"/>
-                <Label Text="Descripcion:" FontSize="Medium"/>
-                <Editor x:Name="descipcion" HeightRequest="150" TextColor="Black"/>
-                <Label Text="Foto URL" FontSize="Medium" TextColor="Black"/>
+                <Label Text="Precio de costo" FontSize="Medium" TextColor="White"/>
+                <Entry x:Name="preciodecompra" Keyboard="Numeric"/>
+                <Label Text="Descripcion:" FontSize="Medium" TextColor="White"/>
+                <Editor x:Name="descipcion" HeightRequest="150" />
+                <Label Text="Foto URL" FontSize="Medium" TextColor="White"/>
                 <Entry x:Name="foto"/>
             </StackLayout>
         </ScrollView>
