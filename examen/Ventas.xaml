@@ -1,7 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="examen.Ventas">
+             x:Class="examen.Ventas"
+             Title="Ventas"
+             IconImageSource="bill.png"
+             BackgroundColor="White"
+
+             >
     <ContentPage.Content>
         <StackLayout>
             <Label TextColor="Black" Text="Ventas"
