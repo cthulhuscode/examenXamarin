@@ -51,7 +51,7 @@ namespace examen
 
         // Detalle del producto
         private void lvProductos_ItemTapped(object sender, ItemTappedEventArgs e)
-        {
+        {            
             var producto = e.Item as Producto;
             var detailPage = new DetalleProducto();
             detailPage.BindingContext = producto;

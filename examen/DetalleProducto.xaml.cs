@@ -27,6 +27,16 @@ namespace examen
             int MiId = int.Parse(Id.Text);
             //DisplayAlert("ID", "" + MiId, "Ok");
 
+            if (string.IsNullOrWhiteSpace(nombre.Text) ||
+                string.IsNullOrWhiteSpace(foto.Text) ||
+                string.IsNullOrWhiteSpace(preciodecompra.Text) ||
+                string.IsNullOrWhiteSpace(preciodeventa.Text) ||
+                string.IsNullOrWhiteSpace(cantidad.Text))
+            {
+                DisplayAlert("Error al actualizar", "Todos los campos son obligatorios", "OK");
+                return;
+            }
+
             var registro = new Producto
             {
                 Id = MiId,
@@ -36,8 +46,6 @@ namespace examen
                 PreciodeVenta = double.Parse(preciodeventa.Text),
                 Foto = foto.Text
             };
-
-            DisplayAlert("ID", Id.Text, "OK");
 
             db.Table<Producto>();
 
@@ -55,7 +63,7 @@ namespace examen
 
             int MiId = int.Parse(Id.Text);
 
-            var respuesta = await DisplayAlert("Alerta!!", "¿Esta seguro de que lo desea eliminar?", "Si", "No");
+            var respuesta = await DisplayAlert("Eliminar producto", "¿Desea eliminar el producto?", "Si", "No");
 
             if (respuesta == true)
             {
