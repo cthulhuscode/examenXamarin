@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="examen.AgregarCliente">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="tbiGuardar" Order="Primary" Icon="save.png" Text="Guardar" Priority="0" Clicked="tbiGuardar_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="35,15,15,15">
+                <Label Text="Nombre" FontSize="Medium"/>
+                <Entry x:Name="nombre" Visual="Material"/>
+                <Label Text="Domicilio" FontSize="Medium" />
+                <Entry x:Name="domicilio" Visual="Material"/>
+                <Label Text="Telefono" FontSize="Medium" />
+                <Entry x:Name="telefono" Keyboard="Numeric" />
+                <Label Text="Correo" FontSize="Medium" />
+                <Entry x:Name="correo" Visual="Material"/>
+                <Label Text="Foto URL" FontSize="Medium" />
+                <Entry x:Name="foto"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="examen.DetalleCliente"
+             >
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="tbiSave" Order="Primary" Icon="listo.png" Text="Guardar" Priority="0" Clicked="tbiSave_Clicked" />
+        <ToolbarItem Name="tbiDelete" Order="Primary" Icon="borrar.png" Text="Borrar" Priority="1" Clicked="tbiDelete_Clicked" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Image Source="{Binding Foto}"/>
+                <StackLayout Margin="35,15,15,15">
+                    <Label x:Name="Id" Text="{Binding Id}" IsVisible="False"/>
+                    <Label Text="Nombre" FontSize="Micro"/>
+                    <Entry x:Name="nombre" Text="{Binding Nombre}" FontSize="Small"/>
+                    <Label Text="Domicilio" FontSize="Micro"/>
+                    <Entry x:Name="domicilio" Text="{Binding Domicilio}" FontSize="Small"/>
+                    <Label Text="Telefono" FontSize="Micro"/>
+                    <Entry x:Name="telefono" Text="{Binding Telefono}" Keyboard="Numeric" FontSize="Small"/>
+                    <Label Text="Correo" FontSize="Micro" />
+                    <Entry x:Name="correo" Text="{Binding Correo}" FontSize="Small"/>
+                    <Label Text="Foto URL" FontSize="Micro"/>
+                    <Entry x:Name="foto" Text="{Binding Foto}" FontSize="Small"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
