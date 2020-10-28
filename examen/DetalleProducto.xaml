@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="examen.DetalleProducto"
+             >
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="tbiSave" Order="Primary" Icon="listo.png" Text="Guardar" Priority="0" Clicked="tbiSave_Clicked" />
+        <ToolbarItem Name="tbiDelete" Order="Primary" Icon="borrar.png" Text="Borrar" Priority="1" Clicked="tbiDelete_Clicked" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Image Source="{Binding Foto}"/>
+                <StackLayout Margin="35,15,15,15">
+                    <Label x:Name="Id" Text="{Binding Id}" IsVisible="False"/>
+                    <Label Text="Nombre" FontSize="Micro"/>
+                    <Entry x:Name="nombre" Text="{Binding Nombre}" FontSize="Small"/>
+                    <Label Text="Cantidad" FontSize="Micro"/>
+                    <Entry x:Name="cantidad" Text="{Binding Cantidad}" Keyboard="Numeric" FontSize="Small"/>
+                    <Label Text="Precio de compra" FontSize="Micro"/>
+                    <Entry x:Name="preciodecompra" Text="{Binding PreciodeCompra}" Keyboard="Numeric" FontSize="Small"/>                    
+                    <Label Text="Precio de venta" FontSize="Micro" />
+                    <Entry x:Name="preciodeventa" Text="{Binding PreciodeVenta}" Keyboard="Numeric" FontSize="Small"/>
+                    <Label Text="Foto URL" FontSize="Micro"/>
+                    <Entry x:Name="foto" Text="{Binding Foto}" FontSize="Small"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

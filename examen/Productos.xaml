@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="examen.Productos"
+             Title="Productos"
+             IconImageSource="products.png"
+             BackgroundColor="White"
+             >
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="tbiAgregar"
+                     Order="Primary" 
+                     Icon="plus.png"
+                     Text="Agregar"                      
+                     Priority="0"
+                     Clicked="tbiAgregar_Clicked"                     
+                     />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+
+        <StackLayout>
+
+            <ListView x:Name="lvProductos" HasUnevenRows="True" Margin="15,5,15,15" ItemTapped="lvProductos_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame BorderColor="#ccc" BackgroundColor="White" Margin="5" CornerRadius="5">
+                                <StackLayout Orientation="Horizontal">
+                                    <StackLayout Orientation="Vertical">
+                                        <Label Text="Nombre" FontSize="Micro" FontAttributes="Bold" TextColor="Black"/>
+                                        <Label Text="{Binding Nombre}" FontSize="Large" TextColor="#c90000"></Label>
+                                        <Label Text="Cantidad" FontSize="Micro" FontAttributes="Bold" TextColor="Black"/>
+                                        <Label Text="{Binding Cantidad}" TextColor="Salmon" FontSize="Small"></Label>
+                                        <Label Text="Precio de compra" FontSize="Micro" FontAttributes="Bold" TextColor="Black"/>
+                                        <Label Text="{Binding PreciodeCompra}" TextColor="Salmon" FontSize="Small"></Label>
+                                        <Label Text="Precio de venta" FontSize="Micro" FontAttributes="Bold" TextColor="Black"/>
+                                        <Label Text="{Binding PreciodeVenta}" TextColor="Salmon" FontSize="Small"></Label>                                  
+                                    </StackLayout>
+                                    <Image Source="{Binding Foto}" HeightRequest="30" WidthRequest="150" HorizontalOptions="EndAndExpand" Margin="5"/>
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

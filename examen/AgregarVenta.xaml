@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="examen.AgregarVenta">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="tbiGuardar" Order="Primary" Icon="save.png" Text="Guardar" Priority="0" Clicked="tbiGuardar_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="35,15,15,15">
+                <Label Text="Fecha" FontSize="Medium"/>
+                <DatePicker x:Name="fecha" Visual="Material" BackgroundColor="Black"/>
+
+                <Picker x:Name="pkrProductos" Title="Seleccionar producto" />
+
+                <Picker x:Name="pkrClientes" Title="Seleccionar cliente" />
+
+                <Label Text="Precio de compra" FontSize="Medium" />
+                <Entry x:Name="preciodecompra" Keyboard="Numeric" />
+                
+                <Label Text="Precio de venta" FontSize="Medium" />
+                <Entry x:Name="preciodeventa" Keyboard="Numeric"/>
+                
+                <Label Text="Precio total" FontSize="Medium" />
+                <Entry x:Name="cantidad" Keyboard="Numeric"/>
+                
+                <Label Text="Foto URL" FontSize="Medium" />
+                <Entry x:Name="foto"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
