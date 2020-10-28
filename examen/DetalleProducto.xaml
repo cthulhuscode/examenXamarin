@@ -2,7 +2,6 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="examen.DetalleProducto"
-             BackgroundColor="Black"
              >
 
     <ContentPage.ToolbarItems>
@@ -17,14 +16,12 @@
                     <Label x:Name="Id" Text="{Binding Id}" IsVisible="False"/>
                     <Label Text="Nombre" FontSize="Micro"/>
                     <Entry x:Name="nombre" Text="{Binding Nombre}" FontSize="Small"/>
-                    <Label Text="Precio de venta" FontSize="Micro" />
-                    <Entry x:Name="preciodeventa" Text="{Binding PreciodeVenta}" Keyboard="Numeric" FontSize="Small"/>
                     <Label Text="Cantidad" FontSize="Micro"/>
                     <Entry x:Name="cantidad" Text="{Binding Cantidad}" Keyboard="Numeric" FontSize="Small"/>
-                    <Label Text="Precio de costo" FontSize="Micro"/>
-                    <Entry x:Name="preciodecosto" Text="{Binding PreciodeCosto}" Keyboard="Numeric" FontSize="Small"/>
-                    <Label Text="Descripcion:" FontSize="Micro"/>
-                    <Editor x:Name="descipcion" HeightRequest="100" Text="{Binding Descripcion}" FontSize="Small"/>
+                    <Label Text="Precio de compra" FontSize="Micro"/>
+                    <Entry x:Name="preciodecompra" Text="{Binding PreciodeCompra}" Keyboard="Numeric" FontSize="Small"/>                    
+                    <Label Text="Precio de venta" FontSize="Micro" />
+                    <Entry x:Name="preciodeventa" Text="{Binding PreciodeVenta}" Keyboard="Numeric" FontSize="Small"/>
                     <Label Text="Foto URL" FontSize="Micro"/>
                     <Entry x:Name="foto" Text="{Binding Foto}" FontSize="Small"/>
                 </StackLayout>

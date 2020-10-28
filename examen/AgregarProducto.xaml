@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="examen.AgregarProducto"
-             BackgroundColor="Black">
+             >
     
     <ContentPage.ToolbarItems>
         <ToolbarItem Name="tbiGuardar" Order="Primary" Icon="save.png" Text="Guardar" Priority="0" Clicked="tbiGuardar_Clicked" />
@@ -11,17 +11,17 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Margin="35,15,15,15">
-                <Label Text="Nombre" FontSize="Medium" TextColor="White"/>
+                <Label Text="Nombre" FontSize="Medium" TextColor="Black"/>
                 <Entry x:Name="nombre" Visual="Material"/>
-                <Label Text="Precio de venta" FontSize="Medium" TextColor="White"/>
+                <Label Text="Precio de venta" FontSize="Medium" TextColor="Black"/>
                 <Entry x:Name="preciodeventa" Keyboard="Numeric"/>
-                <Label Text="Cantidad" FontSize="Medium" TextColor="White"/>
+                <Label Text="Cantidad" FontSize="Medium" TextColor="Black"/>
                 <Entry x:Name="cantidad" Keyboard="Numeric"/>
-                <Label Text="Precio de costo" FontSize="Medium" TextColor="White"/>
-                <Entry x:Name="preciodecompra" Keyboard="Numeric"/>
-                <Label Text="Descripcion:" FontSize="Medium" TextColor="White"/>
-                <Editor x:Name="descipcion" HeightRequest="150" />
-                <Label Text="Foto URL" FontSize="Medium" TextColor="White"/>
+                <Label Text="Precio de costo" FontSize="Medium" TextColor="Black"/>
+                <Entry x:Name="preciodecompra" Keyboard="Numeric" TextColor="Black"/>
+                <Label Text="Descripcion:" FontSize="Medium"/>
+                <Editor x:Name="descipcion" HeightRequest="150" TextColor="Black"/>
+                <Label Text="Foto URL" FontSize="Medium" TextColor="Black"/>
                 <Entry x:Name="foto"/>
             </StackLayout>
         </ScrollView>

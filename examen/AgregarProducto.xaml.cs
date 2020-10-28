@@ -21,7 +21,7 @@ namespace examen
         private void addProduct()
         {
             string folder = System.Environment.GetFolderPath(System.Environment.SpecialFolder.LocalApplicationData);
-            string rutaDb = System.IO.Path.Combine(folder, "MiNegocio1.db");
+            string rutaDb = System.IO.Path.Combine(folder, BaseDeDatos.bdName);
             // DisplayAlert("Ruta de la base de datos", rutaDb, "ok");
             // Crea la base de datos si no existe, y crea una conexión
             var db = new SQLiteConnection(rutaDb);
@@ -35,17 +35,17 @@ namespace examen
                 PreciodeCompra = double.Parse(preciodecompra.Text),
                 Cantidad = int.Parse(cantidad.Text),
                 PreciodeVenta = double.Parse(preciodeventa.Text),
-                Descripcion = descipcion.Text,
                 Foto = foto.Text
             };
 
             db.Insert(registro);
-            DisplayAlert("Agregar", "El registro fue agregado con exito!", "ok");
+            DisplayAlert("Registro agregado", "El registro fue agregado con exito!", "OK");
         }
 
         private void tbiGuardar_Clicked(object sender, EventArgs e)
         {
-            addProduct();            
+            addProduct();
+            Application.Current.MainPage.Navigation.PopAsync();
         }
     }
 }

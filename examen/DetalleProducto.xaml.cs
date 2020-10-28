@@ -21,7 +21,7 @@ namespace examen
         private void tbiSave_Clicked(object sender, EventArgs e)
         {
             string folder = System.Environment.GetFolderPath(System.Environment.SpecialFolder.LocalApplicationData);
-            string rutaDb = System.IO.Path.Combine(folder, "MiNegocio1.db");
+            string rutaDb = System.IO.Path.Combine(folder, BaseDeDatos.bdName);
             var db = new SQLiteConnection(rutaDb);
 
             int MiId = int.Parse(Id.Text);
@@ -31,10 +31,9 @@ namespace examen
             {
                 Id = MiId,
                 Nombre = nombre.Text,
-                PreciodeCompra = double.Parse(preciodecosto.Text),
+                PreciodeCompra = double.Parse(preciodecompra.Text),
                 Cantidad = int.Parse(cantidad.Text),
                 PreciodeVenta = double.Parse(preciodeventa.Text),
-                Descripcion = descipcion.Text,
                 Foto = foto.Text
             };
 
@@ -51,7 +50,7 @@ namespace examen
         async private void tbiDelete_Clicked(object sender, EventArgs e)
         {
             string folder = System.Environment.GetFolderPath(System.Environment.SpecialFolder.LocalApplicationData);
-            string rutaDb = System.IO.Path.Combine(folder, "MiNegocio1.db");
+            string rutaDb = System.IO.Path.Combine(folder, BaseDeDatos.bdName);
             var db = new SQLiteConnection(rutaDb);
 
             int MiId = int.Parse(Id.Text);
@@ -60,7 +59,7 @@ namespace examen
 
             if (respuesta == true)
             {
-                db.Delete<Productos>(MiId);
+                db.Delete<Producto>(MiId);
                 await Application.Current.MainPage.Navigation.PopAsync();
             }
         }

@@ -16,7 +16,7 @@ namespace examen
         public void AbrirBase()
         {
             string folder = System.Environment.GetFolderPath(System.Environment.SpecialFolder.LocalApplicationData);
-            string rutaDb = System.IO.Path.Combine(folder, "MiNegocio1.db");
+            string rutaDb = System.IO.Path.Combine(folder, BaseDeDatos.bdName);
 
             // Crea la base de datos si no existe, y crea una conexión
             var db = new SQLiteConnection(rutaDb);
@@ -41,13 +41,15 @@ namespace examen
             AbrirBase();
         }
 
+        // Agregar producto
         async private void tbiAgregar_Clicked(object sender, EventArgs e)
         {
-            var AgregarProductoPage = new AgregarProducto();
-            await Navigation.PushAsync(AgregarProductoPage);
+            //r AgregarProductoPage = new NavigationPage(new AgregarProducto());
+            await Navigation.PushAsync(new AgregarProducto());
             AbrirBase();
         }
 
+        // Detalle del producto
         private void lvProductos_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             var producto = e.Item as Producto;
